@@ -11,6 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <vaadin.version>7.6.7</vaadin.version>
+		<hsqldb.version>2.5.1</hsqldb.version>
     </properties>
 
     <repositories>
@@ -62,6 +63,12 @@
             <artifactId>servlet-api</artifactId>
             <version>2.4</version>
             <scope>provided</scope>
+        </dependency>
+		<dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
+			<scope>runtime</scope>
         </dependency>
     </dependencies>
 

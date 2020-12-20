@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS clients ( id BIGINT IDENTITY , first_name VARCHAR(255) , second_name VARCHAR(255) , third_name VARCHAR(255) , phone VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS mechanics ( id BIGINT IDENTITY , first_name VARCHAR(255) , second_name VARCHAR(255) , third_name VARCHAR(255) , hourly_salary INT );
+CREATE TABLE IF NOT EXISTS orders ( id BIGINT IDENTITY , description CLOB , id_of_client BIGINT , id_of_mechanic BIGINT , begin_date VARCHAR(255) , end_date VARCHAR(255) , cost INT , status VARCHAR(255) , FOREIGN KEY (id_of_client) REFERENCES clients(id) ON DELETE RESTRICT , FOREIGN KEY (id_of_mechanic) REFERENCES mechanics(id) ON DELETE RESTRICT );
